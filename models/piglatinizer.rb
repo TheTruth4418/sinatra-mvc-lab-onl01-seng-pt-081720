@@ -2,10 +2,7 @@ class PigLatinizer
 
   def pigLatinize(string)
     a = string.split(" ")
-
-    a.each do |word|
-      word.piglatinize_word
-    end
+    a.map {|word| piglatize_word(word)}
     a.join(" ")
   end
 
