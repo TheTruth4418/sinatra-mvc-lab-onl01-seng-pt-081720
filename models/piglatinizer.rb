@@ -15,10 +15,10 @@ def pig(thing)
   consonants = alpha - vowels
 
   showme = []
-    input = thing.split(' ') 
+    input = thing.split(' ')
       input.each do |word|
           if word.length < 2
-             showme << word + "way" 
+             showme << word + "way"
           elsif vowels.include?(word[0])
              showme <<  word + "way"
           elsif consonants.include?(word[0]) && consonants.include?(word[1]) && consonants.include?(word[2])
@@ -27,10 +27,10 @@ def pig(thing)
              showme <<  word[2..-1] + word[0..1] + 'ay'
           elsif consonants.include?(word[0])
              showme <<  word[1..-1] + word[0] + 'ay'
-          else 
+          else
              showme <<  word + '?'
           end
-      end 
+      end
   showme.join(', ').gsub(/,/, '')
 end
 
