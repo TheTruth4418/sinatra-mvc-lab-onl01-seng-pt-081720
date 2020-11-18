@@ -6,6 +6,7 @@ class App < Sinatra::Base
   end
 
   post '/' do
-    @string = params["user_phrase"]
+    mod = Piglatinizer.new
+    mod.pig(params[user_phrase])
   end
 end
